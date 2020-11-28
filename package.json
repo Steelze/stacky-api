@@ -4,12 +4,18 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon src/app"
+    "build": "babel src/ -d dist/",
+    "dev": "nodemon --exec babel-node src/app",
+    "start": "node dist/app"
   },
   "dependencies": {
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/node": "^7.12.6",
+    "@babel/preset-env": "^7.12.7",
     "nodemon": "^2.0.6"
   }
 }
